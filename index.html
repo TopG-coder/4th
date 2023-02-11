@@ -1,0 +1,64 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<title>Netflix | Landing Page UI Design</title>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png"></a>
+        <ul class="navigation">
+            <li><a href="#">House</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+    </header>
+    <div class="banner">
+<img src="img/bg.jpg" class="bg">
+<div class="content">
+<img src="img/name.png" class="movieTitle">
+<h4>
+    <span>2022</span>
+    <span><i>12+</i></span>
+    <span>1h 55min</span>
+    <span>Action</span>
+</h4>
+<p>Hua Mulan (traditional Chinese: 花木蘭; simplified Chinese: 花木兰) is a legendary folk 
+    heroine from the Northern and Southern dynasties era (4th to 6th century CE) of Chinese history. 
+    According to legend, Mulan took her aged father's place in the conscription for the army by disguising herself as a man.</p>
+    <div class="buttons">
+<a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+<a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+    </div>
+    </div>
+   <a class="play" onclick="toggleVideo();"><img src="img/play.png">watch Trailer</a>
+     </div>
+
+
+    <div class="trailer">
+        <video src="img/video.mp4" controls="true"></video>
+        <img src="img/close.png" class="close" onclick="toggleVideo();">
+    </div>
+
+
+<script>
+    function toggleVideo(){
+        const trailer = document.querySelector('.trailer');
+        const video = document.querySelector('video');
+        trailer.classList.toggle('active')
+        video.currentTime = 0;
+        video.pause();
+    }
+</script>
+
+   </body>
+  </html>
